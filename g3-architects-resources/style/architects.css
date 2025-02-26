@@ -8,6 +8,9 @@
   }
 
 /* shared style */
+*{
+    margin: 0;
+}
 .display-flex{
     display: flex;
 }
@@ -23,12 +26,32 @@
 .bg-color{
     background-color: rgb(255, 144, 14, 0.1);
 }
+.btn-primary{
+    background-color: rgb(255, 144, 14);
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 20px 25px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.orange{
+    color: rgb(255, 144, 14);
+}
+main{
+    width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 100px;
+}
 
 /* header style */
 
 
 /* navbar style */
-header{
+.navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -37,7 +60,7 @@ header{
     align-items: center;
 }
 .brand{
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: 700;
 }
 .nav-item{
@@ -50,3 +73,116 @@ header{
     font-weight: 500;
     font-size: 18px;
 }
+.banner-content{
+    max-width: 862px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.banner-title{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.banner-description{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.banner-img{
+    width: 100%;   
+    margin-bottom: 30px;
+}
+/*team and feature related style */
+.team{
+    align-items: center;
+    gap: 30px;
+    margin-top: 0 100px;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+.our-feature{
+    margin-left: 130px;
+    max-width: 535px;
+}
+.feature-title{
+    font-size:3rem ;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.feature-description{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* styled feature enjoy and love */
+#feature-section-title{
+    border-left: 5px solid rgb(255, 144, 14);
+    padding-left: 20px;
+}
+.enjoy-description{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.enjoy{
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.enjoy-items{
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    margin: 20px;
+}
+#experience-badge{
+    padding: 42px 45px;
+    margin-left: -70px;
+    margin-top: -100px;
+}
+#Experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+    
+/* responsive media query */
+@media screen and (max-width:576px) {
+    .navbar, .nav-link, .team, .enjoy{
+        flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    main, .navbar{
+        max-width: 412px;
+    }
+    .our-feature{
+        margin-left: 20px;
+    }
+    
+    .enjoy > img{
+        max-width:100% ;
+        margin: 0 auto;
+    }
+    #experience-badge{
+       margin-top: 10px;
+       margin-left: 150px;
+    }
+}
+@media screen and (min-width:576px) and (max-width:992px){
+    .team{
+        flex-direction: column;
+    }
+    main, .navbar{
+        max-width: 800px;
+    }
+    .our-feature{
+        margin: 20px auto;
+    }
+} 
+    
+
